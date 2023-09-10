@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+
+<link rel="shortcut icon" href="calc_logo.jpg" type="image/x-icon">
+<script src="task1.js"></script>
+        <style>
+              body{
+            box-sizing:content-box;
+            height: 100vh;
+            background:#Ebecf0;
+            width: 100%;
+            display: flex;
+                justify-content: center;
+             align-items: normal;
+            user-select: none;
+            padding: auto;
+            margin: 0; 
+ }
+            .conatiner{
+                height: max-content;
+                background:white;
+                width: 530px;
+                margin-top: 100px;
+                border-radius: 15px;
+                padding:22px;
+            }
+            h1{
+                text-align: center;
+                 font-family:Sans-Serif;
+
+            }
+          
+            input[type="button"]
+            {
+                height:30px;
+                width: 458px;
+                background-color:lightcyan;
+                color: black;
+                margin-left:20px;
+                border: none;
+                outline: none;
+            }
+            input[type="button"]:first-child{
+                border-radius:15px 15px 0px 0px;
+                text-align: start;
+            }
+            input[type="button"]:last-child{
+                border-radius:0px 0px 15px 15px;
+                text-align:end;
+
+            }
+            .num{
+                height:55px;
+                width: 90px;
+                background-color:#b8deee;
+                color: black;
+                font-style: bold;
+                box-shadow: 2px 4px solid gray;
+                margin:20px 10px 10px 1px;
+                cursor: pointer;
+                border-radius: 16px;
+
+            }
+         .opr,.opr2,.num,.opr{
+            background:#Ebecf0;
+            color: blue;
+            font-size: large;
+            height:55px;
+                width: 80px;
+            font-weight: 600;
+            outline: none;
+            border: 1px solid blue;
+            padding: 2px;
+
+         }
+        
+            .opr{
+                
+                box-shadow: 2px 4px solid gray;
+                margin:20px 10px 10px 1px;
+                cursor: pointer;
+                font-style: bold;
+                border-radius: 16px;
+
+            }
+           
+            .opr2{
+           
+                background-color: rgb(255, 165, 0);
+                                font-style: bold;
+                box-shadow: 2px 4px solid gray;
+                margin:20px 10px 10px 1px;
+                cursor: pointer;
+                border-radius: 16px;
+
+            }
+           @media only screen and(max-width:400px){
+            body{
+                background:red;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="conatiner">
+            <div class="row">
+                <input  id="show" type="button" class="form-group"><br>
+            <input type="button" disabled class="form-group" id="content">
+            </div>
+            <table>
+            
+            
+                <tr>
+                    <td>
+                     <button value="7" class="num" onclick="display('7')">7</button></td>
+                     <td>
+                     <button value="8"  class="num"  onclick="display('8')">8</button>
+                     </td>
+                     <td>
+                     <button value="9"  class="num"  onclick="display('9')">9</button>
+                     </td>
+                     <td>
+                        <button value=""  class="opr"  onclick="clear2()">clear</button></td>
+
+                     </td>
+
+                     <td>
+                        <button value=""  class="opr"  onclick="del()">del</button></td>
+                        <td>
+             <tr>
+                <td>
+                 <button value="4" class="num" onclick="display('4')">4</button></td>
+                 <td>
+                 <button value="5"  class="num"  onclick="display('5')">5</button>
+                 </td>
+                 <td>
+                 <button value="6"  class="num"  onclick="display('6')">6</button>
+                 </td>
+                 <td>
+                 <button value="*"  class="opr"  onclick="display('*')">X</button></td>
+                 <td>
+                     <button value="/"  class="opr"  onclick="display('/')">/</button></td>
+         </tr>
+         <tr>
+            <td>
+             <button value="1" class="num" onclick="display('1')">1</button></td>
+             <td>
+             <button value="2"  class="num"  onclick="display('2')">2</button>
+             </td>
+             <td>
+             <button value="3"  class="num"  onclick="display('3')">3</button>
+             </td>
+             <td>
+             <button value="-"  class="opr"  onclick="display('-')">-</button></td>
+             <td>
+                 <button value="+"  class="opr"  onclick="display('+')">+</button></td>
+     </tr>
+     <tr>
+        <td>
+         <button value="." class="num" onclick="display('.')">.</button></td>
+         <td>
+         <button value="0"  class="num"  onclick="display('0')">0  </button>
+         </td>
+         <td>
+         <button value="00"  class="num"  onclick="display('00')">00</button>
+         </td>
+         <td>
+            <button value="%"  class="opr"  onclick="display('%')">%</button></td>
+            
+        <td>
+            <button type="button" class="opr2" onclick="result()">ENTER</button>
+        </td>
+ </tr>
+        </div>
+    </body>
+  

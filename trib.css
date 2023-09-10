@@ -1,0 +1,58 @@
+/* virat name style */
+li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    text-shadow:2px solid black;
+    color: white;
+    font-size: 62px;
+    background: -webkit-linear-gradient(#efe7e7, #d8e1ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     text-align: center;
+      cursor: pointer;
+
+}
+/* card css */
+.card{
+    position: relative;
+    overflow: hidden;
+    width: 18rem;
+     height: 18rem;
+     cursor: pointer;
+     padding-left: 0;
+}
+ .card-body{
+   position: absolute;
+   z-index: 10;
+   bottom:-100%;
+   backdrop-filter: blur(100%);
+   background-color: rgba(250,250,250,0.705);
+   transition: 0.2s ease-in;
+
+ }
+ .card-body p{
+   font-size: 25px;
+   color:black;
+ }
+ .card-title{
+   color: black;
+   font-weight: bold;
+   text-align: center;
+ }
+ .card img{
+    height: inherit;
+    width: inherit;
+    object-fit:fill;
+    margin: none;
+    padding:none;
+    filter: grayscale(100%);
+}
+ .card:hover .card-body{
+ bottom:0;
+ border-radius: 10px;
+ }
+ .card:hover img{
+    filter: grayscale(0%);
+
+ }
